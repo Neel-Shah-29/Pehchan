@@ -21,6 +21,7 @@ contract Files {
         string Cid;
         string Quality;
         string Accuracy;
+        string Description;
     }
 
     //for retreiving user details from user Address
@@ -62,10 +63,11 @@ contract Files {
     function addFiles(
         string memory Cid,
         string memory Quality,
-        string memory Accuracy
+        string memory Accuracy,
+        string memory Description
     ) public {
         FileStructureMapping[msg.sender].push(
-            FileStructure(fileCount, Cid, Quality, Accuracy)
+            FileStructure(fileCount, Cid, Quality, Accuracy, Description)
         );
         fileCount++;
         userMapping[msg.sender].totalNumberOfFiles =
