@@ -5,6 +5,7 @@ import 'react-image-crop/dist/ReactCrop.css'
 import { GrRotateLeft, GrRotateRight } from 'react-icons/gr'
 import { CgMergeVertical, CgMergeHorizontal } from 'react-icons/cg'
 import { IoMdUndo, IoMdRedo, IoIosImage } from 'react-icons/io'
+import Navb from './Navb'
 // import storeData from './LinkedList'
 const Editimg = () => {
     const filterElement = [
@@ -191,10 +192,13 @@ const Editimg = () => {
         link.click()
     }
     return (
-        <div className='image_editor'>
+        <>
+      
+       
+        <div className='image_editor' style={{backgroundImage: "url('https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80')" }}>
             <div className="card">
                 <div className="card_header">
-                    <h2>------ Image Editor ------</h2>
+                    <h2 style={{color:'white'}}>Edit Image</h2>
                 </div>
                 <div className="card_body">
                     <div className="sidebar">
@@ -254,6 +258,7 @@ const Editimg = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

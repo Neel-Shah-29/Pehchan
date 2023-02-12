@@ -102,5 +102,25 @@ def hi():
 	textnew=text.strip()
 	return result(textnew)
 
+
+@app.route('/test', methods=['GET', 'POST'])
+def extract():
+	print(request)
+	file_name = request.files['myFile']
+	#We then read the image with text
+	images=Image.open(file_name)
+	images=numpy.array(images).astype(numpy.float32)
+
+	#convert to grayscale image
+	gray=cv2.cvtColor(images, cv2.COLOR_BGR2GRAY)
+
+	#memory usage with image i.e. adding image to memory
+	# filename = "{}.jpg".format(os.getpid())
+	cv2.imwrite('temp1.jpeg', gray)
+	text = pytesseract.image_to_string('temp1.jpeg')
+	text.translate({ord(c): None for c in string.whitespace})
+	textnew=text.strip()
+	return textnew
+
 if __name__ == '__main__':
 	app.run(host='127.0.0.1', debug = True)

@@ -9,8 +9,8 @@
         padding: 28px;
         width: 700px;
         height: 80%;
-        background-color: #fff;
-        box-shadow: 0 8px 16px 0px rgb(201, 201, 201);
+        background-color: #000000b3;
+        // box-shadow: 0 8px 16px 0px rgb(201, 201, 201);
         .card_header {
             text-align: center;
             padding-bottom: 15px;
@@ -24,10 +24,12 @@
             justify-content: center;
             .sidebar {
                 .reset {
-                    margin-top: 20px;
+                    margin-top: 34px;
+                    margin-left: 2.5rem;
                     .save{
                         background-color: #e335f3 !important;
                         margin-left: 5px;
+
                     }
                     button {
                         background-color: rgb(242,53,85);
@@ -44,13 +46,13 @@
                 }
                 span {
                     font-size: 15px;
-                    color: #404040;
+                    color: white;
                     margin-bottom: 4px;
                     display: block;
                 }
                 .side_body {
                     width: 250px;
-                    border: 1px solid #c3c5c4;
+                    // border: 1px solid #c3c5c4;
                     margin-right: 8px;
                     height: 300px;
                     padding: 10px;
@@ -79,7 +81,7 @@
                             justify-content: space-between;
                             label,
                             span {
-                                color: #404040;
+                                color: white;
                                 font-size: 15px;
                                 text-transform: capitalize;
                             }
@@ -93,7 +95,7 @@
                             margin-bottom: 8px;
                             display: block;
                             font-size: 15px;
-                            color: #404040;
+                            color: white;
                         }
                         .icon {
                             display: grid;
@@ -103,6 +105,7 @@
                                 border: 1px solid rgb(179, 194, 194);
                                 padding: 8px 5px;
                                 display: flex;
+                                color: white;
                                 justify-content: center;
                                 align-items: center;
                                 cursor: pointer;
