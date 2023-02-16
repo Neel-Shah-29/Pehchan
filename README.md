@@ -1,4 +1,4 @@
-# Project Pehchan
+# Our Solution for Unskript Hackathon
 
 ### Problem Statement
 In the ever-evolving metaverse, the need for digitising text documents and
