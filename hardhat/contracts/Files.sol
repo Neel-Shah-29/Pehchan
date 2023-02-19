@@ -104,11 +104,7 @@ contract Files {
     }
 
     //returning file details
-    function getFileDetails(address _userAdd)
-        public
-        view
-        returns (FileStructure[] memory)
-    {
-        return FileStructureMapping[_userAdd];
+    function getFileDetails() public view returns (FileStructure[] memory) {
+        return FileStructureMapping[msg.sender];
     }
 }
